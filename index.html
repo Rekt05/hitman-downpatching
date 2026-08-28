@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hitman WoA Downpatching</title>
+  <meta name="description" content="Information on downpatching Hitman WoA" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav class="sidenav" aria-label="Page">
+    <a href="#what-is-downpatching">What is downpatching?</a>
+    <a href="#important-information">Important information</a>
+    <a href="#notable-patches">Notable patches</a>
+    <a href="#downpatching-instruction">Downpatching instructions</a>
+    <a class="sub" href="#steam">Steam</a>
+    <a class="sub" href="#epic">Epic</a>
+    <a href="#patch-table">Patch table</a>
+    <a href="#zhm-compatibility-table">ZHM compatibility table</a>
+    <a href="#miscellaneous-info">Misc info</a>
+    <a href="#acknowledgements">Acknowledgements</a>
+  </nav>
+
+  <div class="page">
+    <header class="site-header">
+      <div class="wrap">
+        <h1>Hitman WoA Downpatching</h1>
+      </div>
+    </header>
+
+    <main>
+      <section id="what-is-downpatching">
+        <div class="wrap content">
+          <h2>What is downpatching?</h2>
+          <p>Downpatching refers to installing an older version of a game to utilize features that are not present in
+            the
+            current version of the game.</p>
+          <p>For Hitman, its uses include the ability to do things like strafing, molotov accident kills, and
+            generally playing on a stable version of the game to ensure that strategies remain working regardless of the
+            changes IOI makes to the game.</p>
+          <p>
+            This works on Windows as well as Linux using Wine / Steam Proton. The ability to downpatch is also
+            restricted to PC, namely the Steam and Epic
+            Games platforms.
+          </p>
+        </div>
+      </section>
+
+      <section id="important-information">
+        <div class="wrap content">
+          <h2>Important information</h2>
+          <p>SRC submissions allow you to play on all patches excluding those from the first year of the game's release
+            (3.10.0 - 3.70.0), this means you are allowed to submit runs on any patch from 3.100 to current.</p>
+
+          <p>As of version 3.230.1, the entitlements were updated, this means that game versions older than this will
+            need
+            a
+            compatible version of Peacock to play the game.
+            The version of Peacock that should work with patch 3.230.0 and older is <a
+              href="https://github.com/thepeacockproject/Peacock/releases/tag/v8.2.0">v8.2.0</a>, while the <a
+              href="https://github.com/thepeacockproject/Peacock/releases/latest">latest</a> version will work with
+            v3.230.1 and up, as well as the official servers for the game.
+          </p>
+        </div>
+      </section>
+
+      <section id="notable-patches">
+        <div class="wrap content">
+          <h2>Notable patches</h2>
+          <p>If you do not know where to start and you would like to run trilogy, patch 3.230.1 is recommended for its
+            access to strafing, all of the latest strategies, and generally less RNG for said strategies. For individual
+            level runs in general, patch 3.230.1 is again recommended because of the convenience of being able to be
+            used with
+            official servers, but certain levels like Miami and Mumbai would be better served by going further back.
+            Below
+            is a table detailing some notable changes to help you choose a patch to play on.</p>
+          <div class="table-scroll notable-wrap">
+            <table class="notable">
+              <thead>
+                <tr>
+                  <th>Tech</th>
+                  <th>Versions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Strafing</td>
+                  <td>Pre 3.240</td>
+                </tr>
+                <tr>
+                  <td>Subdue Boosting</td>
+                  <td>Pre 3.240</td>
+                </tr>
+                <tr>
+                  <td>Miami FPS Wall</td>
+                  <td>Pre 3.150.1</td>
+                </tr>
+                <tr>
+                  <td>Instinct Shooting Delay</td>
+                  <td>Pre 3.150.1</td>
+                </tr>
+                <tr>
+                  <td>Vanya Wallbang</td>
+                  <td>Pre 3.150.1?</td>
+                </tr>
+                <tr>
+                  <td>RFID Exit</td>
+                  <td>Pre 3.130</td>
+                </tr>
+                <tr>
+                  <td>Molotov Accident Kill</td>
+                  <td>
+                    3.100 to 3.120
+                    <span class="notable-note">Officially introduced in 3.120, available in 3.100 to 3.120</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="install-instructions">
+        <div class="wrap content">
+          <h2 id="downpatching-instruction">Downpatching instructions</h2>
+          <h3 id="steam">Steam</h3>
+          <h4>Video walkthrough</h4>
+          <p>Currently this video does not utilize the .bat file technique and references the need to install dotnet but
+            i left it here for a placeholder</p>
+          <ul>
+            <li>
+              <a href="https://youtu.be/5mg3dFQyFkI">https://youtu.be/5mg3dFQyFkI</a>
+              <ul>
+                <li>Credits: <a href="https://github.com/solderq35">Solder</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/5mg3dFQyFkI" title="Video walkthrough (Steam)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <h4>Text instructions</h4>
+          <p><strong>Setup</strong></p>
+          <ul>
+            <li>
+              Create a folder on your computer for where you would like to download the game
+              <ul>
+                <li>Example: <code>C:\HitmanDownpatch</code></li>
+              </ul>
+            </li>
+            <li>
+              Install Steam DepotDownloader from here:
+              <a
+                href="https://github.com/SteamRE/DepotDownloader/releases/latest">https://github.com/SteamRE/DepotDownloader/releases/latest</a>
+              (download the zip for your operating system, e.g.
+              <code>DepotDownloader-windows-x64.zip</code> if on Windows, then unzip it to the
+              folder you just created)
+            </li>
+            <li>
+              Download the downpatch bat file from here:
+              <a href="assets/Hitman%20WoA%20Downpatch.bat" download="Hitman WoA Downpatch.bat">Hitman WoA
+                Downpatch.bat</a> and put this file into the folder you just created.
+            </li>
+            <li>
+              If you plan to patch the files of your original game install to save disk space,
+              right click Hitman WoA in your Steam Library &gt; Properties &gt; Updates &gt; Wait
+              until I launch the game
+              <ul>
+                <li>This will prevent Steam from trying to auto-update the game (in theory)</li>
+                <li>
+                  This may not stop Steam from updating to a new version of the game when IOI
+                  releases one, and you may need to downpatch again
+                </li>
+                <li>
+                  <a href="assets/steamautoupdates.png">Screenshot for Reference</a>
+                  <div class="figure">
+                    <img class="shot" src="assets/steamautoupdates.png" alt="Screenshot for Reference" />
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>Downpatch instructions</strong></p>
+          <ul>
+            <li>
+              For the next step, refer to the
+              <a href="#patch-table">table below</a>
+              to check the manifest ID's. Alternatively you could use
+              <a href="https://steamdb.info/depot/1659041/manifests/">SteamDB</a>
+              or the
+              <a
+                href="https://docs.google.com/spreadsheets/d/184r93nFFBFc8Z45QkJotKkKUl24XNH_pKMLxdHohhd8/edit?gid=1909790271#gid=1909790271">spreadsheet</a>
+              mentioned at the table below.
+            </li>
+            <li>
+              Copy the manifest ID of the patch you would like to download and then open the
+              <a href="assets/Hitman%20WoA%20Downpatch.bat" download="Hitman WoA Downpatch.bat">Hitman WoA
+                Downpatch.bat</a>
+              in the folder you just created and paste the manifest ID using right click, then press enter.
+            </li>
+            <li>
+              Afterwards you will be prompted to put in your steam username and password, if you have any additional 2FA
+              enabled, you will also need to fill that in.
+              <ul>
+              </ul>
+            </li>
+            <li>
+              After DepotDownloader finishes downloading, you're free to either add it to
+              steam as a non-steam game, or overwrite your main game install's files:
+              <ul>
+                <li>
+                  If you want to keep both the current game install and the downpatched versions,
+                  you can simply add the game to steam as a non-steam game by clicking
+                  <strong>ADD A GAME</strong> on the bottom left of your steam client, clicking
+                  <strong>Browse</strong> on the window that pops up, and locating the
+                  folder you just installed the game to, selecting HITMAN3.exe, and adding the game to
+                  steam.
+                  <div class="figure">
+                    <img class="shot" src="assets/steam-screenshot.png" alt="image" />
+                  </div>
+                </li>
+                <li>
+                  If you want to replace your current install game files with the downpatched
+                  version to save file space on your system, open your original install (Steam
+                  &gt; Hitman &gt; Settings &gt; Manage &gt; Browse Local Files) and drag the contents
+                  of the folder you just installed it in to there.
+                  <div class="figure">
+                    <img class="shot" src="assets/steam-screenshot-2.png" alt="image" />
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Unlike with Epic, you can launch the downpatched game as normal through the official
+              Steam client as you normally would.
+            </li>
+          </ul>
+
+          <h4>Authentication issues</h4>
+          <p>
+            If the .bat / DepotDownloader method fails to log in, you can download the same depot through
+            Steam itself instead.
+          </p>
+          <ul>
+            <li>
+              Open the Steam console using a browser or the Windows Run dialog (Win + R) by going to
+              <code>steam://open/console</code>, or in Steam click the console tab if you
+              already have it enabled.
+            </li>
+            <li>
+              Run
+              <code>download_depot 1659040 1659041 &lt;MANIFEST_ID&gt;</code>
+              using the same Steam manifest ID from the
+              <a href="#patch-table">patch table</a>.
+              <ul>
+                <li>
+                  Steam will download the files into a folder it creates, usually under
+                  <code>steamapps\content\app_1659040\depot_1659041</code>
+                  inside your Steam install.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Add that download as a non-steam game, or overwrite your original game files, in the same way mentioned
+              above.
+            </li>
+            <li>
+              If opening the game then fails with a “Failed to initialize Steam” error,
+              <a href="assets/steam_appid.txt" download="steam_appid.txt">create (or download this file)</a>
+              named <code>steam_appid.txt</code> in the Retail folder and put only the text of
+              <code>1659040</code> in it.
+            </li>
+          </ul>
+
+          <h3 id="epic">Epic</h3>
+          <h4>Video walkthrough</h4>
+          <ul>
+            <li>
+              <a href="https://www.youtube.com/watch?v=4Uzx9CJf-uk">https://www.youtube.com/watch?v=4Uzx9CJf-uk</a>
+              <ul>
+                <li>Credits: <a href="https://github.com/Tinosaurus">Tinosaurus</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/4Uzx9CJf-uk" title="Video walkthrough (Epic)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <h4>Text instructions</h4>
+          <p><strong>Command line stuff / prereqs</strong></p>
+          <ul>
+            <li>Just know the very basics</li>
+            <li>
+              Right click folder in Windows Explorer &gt; Copy address as text
+              <ul>
+                <li>
+                  <a href="assets/copyaddress.png">Screenshot for Reference</a>
+                  <div class="figure">
+                    <img class="shot" src="assets/copyaddress.png" alt="Screenshot for Reference" />
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Type <code>cd &lt;DIRECTORY_ADDRESS&gt;</code> into your command line / terminal to
+              navigate to that directory in the command line
+              <ul>
+                <li>
+                  <code>&lt;ALLCAPS&gt;</code> in the below documentation should be understood as a
+                  stand-in value for your actual credentials / files, please substitute with the
+                  correct capitalization, and without angled brackets unless otherwise indicated.
+                </li>
+              </ul>
+            </li>
+            <li>Right click to paste into terminal / command line</li>
+            <li>
+              If for some reason a directory has a space in it (e.g.
+              <code>C:\Program Files...</code>), then please surround it with single quotes for any
+              command line arguments, e.g. <code>cd 'C:\Program Files...'</code>, or it won't work
+            </li>
+          </ul>
+          <p><strong>Setup</strong></p>
+          <ul>
+            <li>
+              Create a folder on your computer for where you would like to download the game
+              <ul>
+                <li>Example: <code>C:\HitmanDownpatch</code></li>
+              </ul>
+            </li>
+            <li>
+              Legendary is essentially a modded game launcher for Epic that will allow you to
+              downpatch
+            </li>
+            <li>
+              Install Legendary from here:
+              <a
+                href="https://github.com/derrod/legendary/releases/latest">https://github.com/derrod/legendary/releases/latest</a>
+              (just download <code>legendary.exe</code> if on Windows, and put it in the folder you
+              just created)
+            </li>
+            <li>
+              See this document on more information on how to install Hitman WoA with Legendary
+              specifically:
+              <a
+                href="https://github.com/solderq35/hitman-tech-tips/blob/main/misc/h3legendary.md">https://github.com/solderq35/hitman-tech-tips/blob/main/misc/h3legendary.md</a>
+            </li>
+            <li>
+              General Legendary documentation:
+              <a
+                href="https://github.com/derrod/legendary/blob/master/README.md">https://github.com/derrod/legendary/blob/master/README.md</a>
+            </li>
+            <li>
+              Before proceeding further, open the official Epic Games Launcher, click profile
+              picture in upper right, then go to Settings &gt; Manage Games &gt; Uncheck "Allow
+              Auto Updates". Otherwise, the game will update itself to the latest version
+              automatically again if you ever open the Epic Games launcher later for any reason.
+              <ul>
+                <li>
+                  <a href="assets/epicautoupdates.png">Screenshot for Reference</a>
+                  <div class="figure">
+                    <img class="shot" src="assets/epicautoupdates.png" alt="Screenshot for Reference" />
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>Downpatch instructions</strong></p>
+          <ul>
+            <li>
+              For the next steps, refer to the
+              <a href="#patch-table">table below</a> for
+              specific patch manifests. Download the manifest you want.
+            </li>
+            <li>
+              In Terminal / Command Line, navigate to the folder you just created with
+              <code>cd &lt;INSTALL_LOCATION&gt;</code>, e.g. <code>cd C:\HitmanDownpatch</code>
+            </li>
+            <li>
+              Run the following commands. All of the following except
+              <code>legendary launch</code> should only have to be completed once per downpatch:
+              <ul>
+                <li><code>legendary auth</code></li>
+                <li>
+                  <code>legendary install Eider --manifest &lt;WHERE_YOU_INSTALLED_MANIFEST&gt;</code>
+                  <ul>
+                    <li>
+                      EXAMPLE INPUT (with my filepath):
+                      <code>legendary install Eider --manifest C:\Users\Legion\Downloads\Eider_Windows_6041891.manifest</code>
+                    </li>
+                    <li>
+                      <code>Eider</code> is a "code name" so to speak for Hitman WoA in Epic /
+                      Legendary
+                    </li>
+                    <li>
+                      If you get asked if you want to install offline or if you want to install
+                      DLC's, say yes.
+                    </li>
+                    <li>
+                      You might get 403 errors on the download; the Epic / Legendary servers
+                      aren't very stable for downloading. Either wait it out, or hit
+                      <code>Ctrl C</code> to cancel the download and try again.
+                    </li>
+                  </ul>
+                </li>
+                <li><code>legendary verify Eider</code></li>
+                <li>
+                  <code>legendary repair Eider</code>
+                  <ul>
+                    <li>
+                      The two commands above of <code>verify</code> and <code>repair</code> are
+                      needed because often times, at least a few downloaded files will be
+                      corrupted. Your game will not launch if files are corrupted, so you should
+                      verify and repair always after installing the downpatch files.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>legendary launch Eider --skip-version-check</code>
+                  <ul>
+                    <li>
+                      The <code>--skip-version-check</code> argument is needed on a downpatched
+                      game, or it won't launch.
+                    </li>
+                    <li>
+                      NOTE: You can ONLY use legendary to launch the downpatched version on Epic.
+                      The official Epic Games Launcher won't let you launch the game when
+                      downpatched!
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="patch-table" class="table-panel">
+        <div class="wide content">
+          <h2>Patch table</h2>
+          <ul>
+            <li>
+              Manifest ID's alternative reference spreadsheet:
+              <a
+                href="https://docs.google.com/spreadsheets/d/184r93nFFBFc8Z45QkJotKkKUl24XNH_pKMLxdHohhd8/edit?gid=1909790271#gid=1909790271">https://docs.google.com/spreadsheets/d/184r93nFFBFc8Z45QkJotKkKUl24XNH_pKMLxdHohhd8/edit?gid=1909790271#gid=1909790271</a>
+            </li>
+          </ul>
+          <div class="table-scroll">
+            <table class="patch-head">
+              <colgroup>
+                <col class="col-manifest" />
+                <col class="col-date" />
+                <col class="col-version" />
+                <col class="col-notes" />
+                <col class="col-comment" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Manifest name / download</th>
+                  <th>Release date</th>
+                  <th>Game version</th>
+                  <th>Official patch notes</th>
+                  <th>Patch note commentary</th>
+                </tr>
+              </thead>
+            </table>
+            <details class="fold patch-fold">
+              <summary>
+                <span class="fold-tri" aria-hidden="true"></span>
+                Banned patches
+              </summary>
+              <table class="banned-table">
+                <colgroup>
+                  <col class="col-manifest" />
+                  <col class="col-date" />
+                  <col class="col-version" />
+                  <col class="col-notes" />
+                  <col class="col-comment" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4446006.manifest">Eider 4446006</a> (Epic)</span></div>
+                    </td>
+                    <td>20-Jan-2021</td>
+                    <td>3.10.0</td>
+                    <td class="notes-col"></td>
+                    <td class="comment-col">- First Patch<br />- <a href="https://youtu.be/IIOtVc7FwqU">Prompts UI is
+                        messed
+                        up</a> (ON DOWNPATCHED VERSION, it was fine back in the day)<br />  - (Fixed February 2021)</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4466613.manifest">Eider 4466613</a> (Epic)</span></div>
+                    </td>
+                    <td>21-Jan-2021</td>
+                    <td>3.10.0 (OBS Hotfix - Assumed version number)</td>
+                    <td class="notes-col"></td>
+                    <td class="comment-col">- First Patch variant<br />- <a href="https://youtu.be/IIOtVc7FwqU">Prompts
+                        UI
+                        is messed up</a> (ON DOWNPATCHED VERSION, it was fine back in the day)<br />  - (Fixed February
+                      2021)</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4472392.manifest">Eider 4472392</a> (Epic)</span></div>
+                    </td>
+                    <td>23-Jan-2021</td>
+                    <td>3.10.0 (Another hotfix?)</td>
+                    <td class="notes-col"></td>
+                    <td class="comment-col">- First Patch variant<br />- <a href="https://youtu.be/IIOtVc7FwqU">Prompts
+                        UI
+                        is messed up</a> (ON DOWNPATCHED VERSION, it was fine back in the day)<br />  - (Fixed February
+                      2021)</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4564176.manifest">Eider 4564176</a> (Epic)</span></div>
+                    </td>
+                    <td>23-Feb-2021</td>
+                    <td>3.11.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-february-patch-3-11/">https://www.ioi.dk/hitman-3-february-patch-3-11/</a>
+                    </td>
+                    <td class="comment-col">- <a href="https://www.youtube.com/watch?v=bo_vPd7cN80">Removed Druzhina
+                        wallbang</a><br />- <a href="https://youtu.be/hGr-ekdRMxA?t=26">Removed Train OOB</a><br />- <a
+                        href="https://youtu.be/yA83Ip4-jHg?t=213">Removed Berlin Manhole Exit</a><br />- <a
+                        href="https://youtu.be/T-swLeD-vtY?t=60">Removed a Chongqing Vault Skip</a><br />- Weird
+                      downpatch
+                      prompt issue fixed</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4635444.manifest">Eider 4635444</a> (Epic)</span></div>
+                    </td>
+                    <td>30-Mar-2021</td>
+                    <td>3.20.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-march-patch-3-20/">https://www.ioi.dk/hitman-3-march-patch-3-20/</a>
+                    </td>
+                    <td class="comment-col"></td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4685799.manifest">Eider 4685799</a> (Epic)</span></div>
+                    </td>
+                    <td>6-Apr-2021</td>
+                    <td>3.20.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/patch-notes-hitman3/">https://www.ioi.dk/patch-notes-hitman3/</a>
+                    </td>
+                    <td class="comment-col">- Check "April 6 - PC Only" in official patch notes. Fixed a frame rate
+                      issue.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4763566.manifest">Eider 4763566</a> (Epic)</span></div>
+                    </td>
+                    <td>10-May-2021</td>
+                    <td>3.30.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-may-patch-3-30/">https://www.ioi.dk/hitman-3-may-patch-3-30/</a>
+                    </td>
+                    <td class="comment-col">- <a href="https://www.youtube.com/watch?v=zk4kBSXJf8c">Emetic Patch</a>
+                      (sick
+                      NPC throw up elsewhere) <br />- <a href="https://www.youtube.com/watch?v=Y0NZZN0VkFQ">Legal Sniper
+                        Accident</a> in Mendoza (Gaucho Start) patched in Mendoza. Also some lighting fixes.</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4879673.manifest">Eider 4879673</a> (Epic)</span></div>
+                    </td>
+                    <td>15-Jun-2021</td>
+                    <td>3.40.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-june-patch-3-40/">https://www.ioi.dk/hitman-3-june-patch-3-40/</a>
+                    </td>
+                    <td class="comment-col"></td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_4916414.manifest">Eider 4916414</a> (Epic)</span></div>
+                    </td>
+                    <td>23-Jun-2021</td>
+                    <td>3.40.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/patch-notes-hitman3/">https://www.ioi.dk/patch-notes-hitman3/</a>
+                    </td>
+                    <td class="comment-col">- Check "June 21 - PC Only" in official patch notes. Fixed an issue with
+                      Epic
+                      Overlay</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_5010755.manifest">Eider 5010755</a> (Epic)</span></div>
+                    </td>
+                    <td>27-Jul-2021</td>
+                    <td>3.50.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-july-patch-3-50/">https://www.ioi.dk/hitman-3-july-patch-3-50/</a>
+                    </td>
+                    <td class="comment-col">- Added Dartmoor game show</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_5086890.manifest">Eider 5086890</a> (Epic)</span></div>
+                    </td>
+                    <td>31-Aug-2021</td>
+                    <td>3.50.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/patch-notes-hitman3/">https://www.ioi.dk/patch-notes-hitman3/</a>
+                    </td>
+                    <td class="comment-col">- Check "August 31 - PC Only" in official patch notes. Fixed an issue where
+                      players experienced FPS drops/ stuttering after the 3.50 (July) patch.</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_5191698.manifest">Eider 5191698</a> (Epic)</span></div>
+                    </td>
+                    <td>28-Sep-2021</td>
+                    <td>3.70.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-september-patch-3-70/">https://www.ioi.dk/hitman-3-september-patch-3-70/</a>
+                    </td>
+                    <td class="comment-col">- Added back shoulder swap <br />- Tweaked sniper slowdown to be more
+                      responsive
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_5220846.manifest">Eider 5220846</a> (Epic)</span></div>
+                    </td>
+                    <td>1-Oct-2021</td>
+                    <td>3.70.0</td>
+                    <td class="notes-col"><a
+                        href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/patch-notes-hitman3/">https://www.ioi.dk/patch-notes-hitman3/</a>
+                    </td>
+                    <td class="comment-col">- Check "October 1 - PC Only" in official patch notes. Fixed "No “Woosh”
+                      sound
+                      on PC.</td>
+                  </tr>
+                  <tr>
+                    <td class="manifest-cell">
+                      <div class="manifest"><span class="id-epic"><a
+                            href="manifests/Eider_Windows_5259620.manifest">Eider 5259620</a> (Epic)</span></div>
+                    </td>
+                    <td>26-Oct-2021</td>
+                    <td>3.70.0</td>
+                    <td class="notes-col"></td>
+                    <td class="comment-col"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+            <table>
+              <colgroup>
+                <col class="col-manifest" />
+                <col class="col-date" />
+                <col class="col-version" />
+                <col class="col-notes" />
+                <col class="col-comment" />
+              </colgroup>
+              <tbody>
+                <tr class="patch-group allowed">
+                  <td colspan="5">Allowed patches</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_5527099.manifest">Eider
+                          5527099</a> (Epic)</span><span class="id-steam"><span class="steam-id">3902189938284110581
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>20-Jan-2022</td>
+                  <td>3.100</td>
+                  <td class="notes-col"><a
+                      href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-year-2-patch-notes/">https://www.ioi.dk/hitman-3-year-2-patch-notes/</a>
+                  </td>
+                  <td class="comment-col">- Year 2 Patch. <br />- <a
+                      href="https://www.youtube.com/watch?v=77QUS3sY0EQ">Removed Dartmoor SA 37 chandy
+                      wallbang</a><br />-
+                    <a href="https://youtu.be/9rqI3jBgoFM?t=19s">Messed up sliding doors</a><br />- First patch
+                    available
+                    to Steam users.<br />- First patch Molotov seems to be available.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_5540627.manifest">Eider
+                          5540627</a> (Epic)</span><span class="id-steam"><span class="steam-id">3616963494886024195
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>21-Jan-2022</td>
+                  <td>3.100</td>
+                  <td class="notes-col"><a
+                      href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-year-2-patch-notes/">https://www.ioi.dk/hitman-3-year-2-patch-notes/</a>
+                  </td>
+                  <td class="comment-col">- Year 2 variant.</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_5561401.manifest">Eider
+                          5561401</a> (Epic)</span><span class="id-steam"><span class="steam-id">8924469489751784366
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>31-Jan-2022 (Maybe)</td>
+                  <td>3.100</td>
+                  <td class="notes-col"><a
+                      href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-year-2-patch-notes/">https://www.ioi.dk/hitman-3-year-2-patch-notes/</a>
+                  </td>
+                  <td class="comment-col">- Year 2 variant.<br />- No extra cameras in Master difficulty Dubai
+                    yet.<br />-
+                    <a
+                      href="https://www.hitmanforum.com/t/year-2-may-official-community-rubber-duck-featured-contracts/14702">May
+                      19th according to featured contract thumbnails</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_5898594.manifest">Eider
+                          5898594</a> (Epic)</span><span class="id-steam"><span class="steam-id">2244167751737065138
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>24-May-2022 or later</td>
+                  <td>3.110</td>
+                  <td class="notes-col"><a
+                      href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-year-2-may-patch-notes">https://www.ioi.dk/hitman-3-year-2-may-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://www.youtube.com/watch?v=GJcN8RMhOxo&t=24s">S3 Master
+                      Cameras
+                      Patch</a><br />- <a href="https://youtu.be/v2LsiANC3NY">Added invisible floor to Mendoza sliding
+                      roof</a><br />- Most recent ET Arcade dates to 2022-Jul-14</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_5915918.manifest">Eider
+                          5915918</a> (Epic)</span></div>
+                  </td>
+                  <td>24-May-2022 or later</td>
+                  <td>3.110</td>
+                  <td class="notes-col"><a
+                      href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-year-2-may-patch-notes">https://www.ioi.dk/hitman-3-year-2-may-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://www.youtube.com/watch?v=GJcN8RMhOxo&t=24s">S3 Master
+                      Cameras
+                      Patch</a><br />- <a href="https://youtu.be/v2LsiANC3NY">Added invisible floor to Mendoza sliding
+                      roof</a><br />- Most recent ET Arcade dates to 2022-Jul-14</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_6041891.manifest">Eider
+                          6041891</a> (Epic)</span><span class="id-steam"><span class="steam-id">1587269672222714171
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>26-Jul-2022</td>
+                  <td>3.120</td>
+                  <td class="notes-col"><a
+                      href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-july-patch-notes/">https://www.ioi.dk/hitman-3-july-patch-notes/</a>
+                  </td>
+                  <td class="comment-col">- Added Molotov.<br />- Technically not the only patch with Molly
+                    playable<br />- Fixed (some) Haven viewcone wallhacks</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_6239328.manifest">Eider
+                          6239328</a> (Epic)</span><span class="id-steam"><span class="steam-id">182129136748469362
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>6-Oct-2022</td>
+                  <td>3.130</td>
+                  <td class="notes-col"><a
+                      href="https://web.archive.org/web/20220925013119/https://www.ioi.dk/hitman-3-october-patch-notes/">https://www.ioi.dk/hitman-3-october-patch-notes/</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://youtu.be/eXTd8ZC3ftA">Removed molly accident /
+                      wallbang</a><br />- <a href="https://youtu.be/y2GuYwNMy5k?t=18">Changed NY frisk</a><br />  -
+                    Check
+                    the <a href="https://hitruns-wiki.vercel.app/docs/fullgame_tutorials#meta-strategies-overview">new
+                      Frisk skip</a><br />- Changed Dartmoor ledge drop<br />  - Check the <a
+                      href="https://youtu.be/RIlDbIci-bs?t=46">new Dartmoor Ledge Drop</a><br />- Removed <a
+                      href="https://youtu.be/fyPVfSPQSb4?t=96">RFID exploit</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_6519315.manifest">Eider
+                          6519315</a> (Epic)</span><span class="id-steam"><span class="steam-id">8905605137959754095
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>26-Jan-2023</td>
+                  <td>3.140</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/january-patch-notes">https://ioi.dk/hitman/patch-notes/january-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- Removed <a href="https://youtu.be/l5xo6fOUSq0?t=36">Particle Boosts</a>
+                    (will
+                    return in a later patch allegedly) <br />  - <a href="https://youtu.be/Ea3vtYhKWOo">Red Tie Kiwi</a>
+                    (notable for being the only unlockable item listed here), <a
+                      href="https://youtu.be/g9VWeXQGABE?t=58">Apple</a>, Soap, Apricot, <a
+                      href="https://youtu.be/04kyQ6mahsY?t=1">Flower Pot</a> still work for boosting. <br /> -
+                    Introduced
+                    Freelancer Game Mode <br /> - Removed (this version of) <a
+                      href="https://i.ibb.co/7pjjG4v/jan2023-removed-dartmoor-ledge-drop.png">Dartmoor Ledge Drop</a>
+                    <br /> - Kalmer and Sieker no longer share ammo
+                  </td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_6782587.manifest">Eider
+                          6782587</a> (Epic)</span><span class="id-steam"><span class="steam-id">8964670781144179508
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>11-May-2023</td>
+                  <td>3.150.1</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2023/hitman-woa-may-patch-notes">https://ioi.dk/hitman/patch-notes/2023/hitman-woa-may-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://youtu.be/l5xo6fOUSq0?t=36">Particle Boosts</a> returned to
+                    previous state <br />- Input delay added for shooting while in Instinct mode <br />  - <a
+                      href="https://youtu.be/8n22un-jRgQ">Short Video Demo</a> (0:00 to 0:25 is on current patch, 0:25
+                    to
+                    end is on old patch) <br />  - <a href="https://youtu.be/aw1ueYw4a-Y">More in depth video (read
+                      description)</a><br />- NPC's drop items immediately after getting hit by tranq darts now <br />-
+                    <a href="https://youtu.be/j5oJwjdMdVQ">First Person Camera Glitch</a> has been removed <br />-
+                    Puddles
+                    electrocute more reliably now <br />- <a href="https://youtu.be/QjLISNHWj9o?t=628">Miami 15-30s
+                      strat</a> is now more FPS dependent, need high FPS to kill Sierra reliably<br />  - Preliminary
+                    findings:<br />    ~35% success on 120 FPS<br />    ~50% success on 190 FPS<br />  - <a
+                      href="https://youtu.be/ZWvJEn1k0j4">Backup Strat (~35s)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_6984506.manifest">Eider
+                          6984506</a> (Epic)</span><span class="id-steam"><span class="steam-id">413982561460909428
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>17-Aug-2023</td>
+                  <td>3.160</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2023/hitman-woa-august-patch-notes">https://ioi.dk/hitman/patch-notes/2023/hitman-woa-august-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://youtu.be/ylGwSNNgp6I?t=23">Removed Dartmoor Ledge Drop
+                      (again)</a> <br />- Dropping <a
+                      href="https://hitman.fandom.com/wiki/Chloroform_Flask">Chloroform</a> is now illegal (both
+                    Freelancer and normal mode) <br />- Alt F4 is no longer banned in Hitman Freelancer <br /> - Some
+                    audio distractions in and around the trophy room in Dartmoor can no longer be heard by NPC's.
+                    Examples: <br />  - <a href="https://youtu.be/_axr3SeMMCs?t=20">This distraction outside of room</a>
+                    <br />  - <a href="https://youtu.be/Wpq4FNr0kyc?t=6">These panic shots at start of run</a> (Rebecca
+                    panic lure) <br />  - <a href="https://youtu.be/Rao5WrQChls?t=119">Shooting this door</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_7255037.manifest">Eider
+                          7255037</a> (Epic)</span><span class="id-steam"><span class="steam-id">583463383929905977
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>31-Oct-2023</td>
+                  <td>3.170.1</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2023/hitman-woa-october-patch-notes">https://ioi.dk/hitman/patch-notes/2023/hitman-woa-october-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2023/hitman-woa-october-patch-notes#freelancer-improvements">See
+                      list of bug fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_7628109.manifest">Eider
+                          7628109</a> (Epic)</span><span class="id-steam"><span class="steam-id">2691824735524352346
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>21-Mar-2024</td>
+                  <td>3.180</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-march-patch-notes">https://ioi.dk/hitman/patch-notes/2024/hitman-woa-march-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-march-patch-notes#bug-fixes">See list of
+                      bug
+                      fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_7836435.manifest">Eider
+                          7836435</a> (Epic)</span><span class="id-steam"><span class="steam-id">3342871334266827735
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>27-Jun-2024</td>
+                  <td>3.190</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-march-patch-notes">https://ioi.dk/hitman/patch-notes/2024/hitman-woa-june-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-june-patch-notes">See list of bug
+                      fixes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_8054457.manifest">Eider
+                          8054457</a> (Epic)</span><span class="id-steam"><span class="steam-id">1304651127213885772
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>12-Sep-2024</td>
+                  <td>3.200</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-september-2024-patch-notes-1">https://ioi.dk/hitman/patch-notes/2024/hitman-woa-september-2024-patch-notes-1</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-september-2024-patch-notes-1">See list of
+                      bug fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_8338779.manifest">Eider
+                          8338779</a> (Epic)</span><span class="id-steam"><span class="steam-id">3369603310032422544
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>12-Dec-2024</td>
+                  <td>3.210.1</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-december-2024-patch-notes">https://ioi.dk/hitman/patch-notes/2024/hitman-woa-december-2024-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-december-2024-patch-notes">See list of bug
+                      fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_8385130.manifest">Eider
+                          8385130</a> (Epic)</span><span class="id-steam"><span class="steam-id">1007177791479719056
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>20-Dec-2024</td>
+                  <td>3.210.2</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-december-2024-patch-notes">https://ioi.dk/hitman/patch-notes/2024/hitman-woa-december-2024-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2024/hitman-woa-december-2024-patch-notes">See list of bug
+                      fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_8619160.manifest">Eider
+                          8619160</a> (Epic)</span><span class="id-steam"><span class="steam-id">8600814998895655653
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>27-Mar-2025</td>
+                  <td>3.220.0</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2025/hitman-woa-march-2025-patch-notes">https://ioi.dk/hitman/patch-notes/2025/hitman-woa-march-2025-patch-notes</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2025/hitman-woa-march-2025-patch-notes">See list of bug
+                      fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_8717556.manifest">Eider
+                          8717556</a> (Epic)</span><span class="id-steam"><span class="steam-id">2672127975667806282
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>10-Apr-2025</td>
+                  <td>3.220.2</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2025/hitman-woa-ps-vr2-patch-notes-1">https://ioi.dk/hitman/patch-notes/2025/hitman-woa-ps-vr2-patch-notes-1</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2025/hitman-woa-ps-vr2-patch-notes-1">See list of bug
+                      fixes</a> <br /> - PSVR2 introduced. (Same as pc in 3.240.1)</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_8867373.manifest">Eider
+                          8867373</a> (Epic)</span><span class="id-steam"><span class="steam-id">6711704740148543453
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>06-Jun-2025</td>
+                  <td>3.230.0</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2025/season-of-high-stakes-3-230-0-2025">https://ioi.dk/hitman/patch-notes/2025/season-of-high-stakes-3-230-0-2025</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2025/season-of-high-stakes-3-230-0-2025">See list of bug
+                      fixes</a> <br /> - Added Banker ET.</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_9122428.manifest">Eider
+                          9122428</a> (Epic)</span><span class="id-steam"><span class="steam-id">3672902092979765206
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>06-Jun-2025</td>
+                  <td>3.230.1</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2025/hitman-woa-nintendo-switch-2-patch-notes-august-26th-2025">https://ioi.dk/hitman/patch-notes/2025/hitman-woa-nintendo-switch-2-patch-notes-august-26th-2025</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2025/hitman-woa-nintendo-switch-2-patch-notes-august-26th-2025">See
+                      list of bug fixes</a> <br /> First Switch 2 patch. Prepping for iOS release. (Note: These have
+                    very
+                    different physics as the main game, and are treated on separate leaderboards.)</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic"><a href="manifests/Eider_Windows_9242611.manifest">Eider
+                          9242611</a> (Epic)</span><span class="id-steam"><span class="steam-id">8609847986114318815
+                          (Steam)</span></span></div>
+                  </td>
+                  <td>25-Sep-2025</td>
+                  <td>3.240.1</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2025/season-of-the-dragon-3-240-0-2025-september-25-hitman-woa">https://ioi.dk/hitman/patch-notes/2025/season-of-the-dragon-3-240-0-2025-september-25-hitman-woa</a>
+                  </td>
+                  <td class="comment-col">- <a
+                      href="https://ioi.dk/hitman/patch-notes/2025/season-of-the-dragon-3-240-0-2025-september-25-hitman-woa">See
+                      list of bug fixes</a> <br /> - <a href="https://www.youtube.com/watch?v=01U_iwUyLRw&t=15s">Subdue
+                      Boosts patched.</a> (Prompt gets removed when turning around) <br /> - Newspaper no longer KO's
+                    when
+                    thrown <br /> - PSVR2 Changes ported over to PC <br /> - Added Infiltrator ET. <br /> - Changed The
+                    Banker lockdown behaviour</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic">Eider 9383409 (Epic)</span><span class="id-steam"><span
+                          class="steam-id">4291319238449960041 (Steam)</span></span></div>
+                  </td>
+                  <td>30-Oct-2025</td>
+                  <td>3.240.3</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2025/game-update-3-240-3">https://ioi.dk/hitman/patch-notes/2025/game-update-3-240-3</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://ioi.dk/hitman/patch-notes/2025/game-update-3-240-3">See the
+                      list of bug
+                      fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic">Eider 9476200 (Epic)</span><span class="id-steam"><span
+                          class="steam-id">9210823321173687524 (Steam)</span></span></div>
+                  </td>
+                  <td>01-Dec-2025</td>
+                  <td>3.250</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2025/game-update-3-250">https://ioi.dk/hitman/patch-notes/2025/game-update-3-250</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://ioi.dk/hitman/patch-notes/2025/game-update-3-250">See the
+                      list of bug
+                      fixes</a> <br /> - Added Reflection ET.</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic">Eider 9753972 (Epic)</span><span class="id-steam"><span
+                          class="steam-id">3082065360189430621 (Steam)</span></span></div>
+                  </td>
+                  <td>25-Feb-2026</td>
+                  <td>3.260.1</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-260-1">https://ioi.dk/hitman/patch-notes/2026/game-update-3-260-1</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-260-1">See the
+                      list of bug
+                      fixes</a> <br /> - Added Harbinger ET.</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic">Eider 10212273 (Epic)</span><span class="id-steam"><span
+                          class="steam-id">5604189710016205281 (Steam)</span></span></div>
+                  </td>
+                  <td>06-Jun-2026</td>
+                  <td>3.270.0</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-270">https://ioi.dk/hitman/patch-notes/2026/game-update-3-270</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-270">See the
+                      list of bug
+                      fixes</a> <br /> - Added Wizard ET.</td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic">Eider 10269511 (Epic)</span><span class="id-steam"><span
+                          class="steam-id">8577875111335820028 (Steam)</span></span></div>
+                  </td>
+                  <td>12-Jun-2026</td>
+                  <td>3.270.1</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-270-1">https://ioi.dk/hitman/patch-notes/2026/game-update-3-270-1</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-270-1">See the
+                      list of bug
+                      fixes</a></td>
+                </tr>
+                <tr>
+                  <td class="manifest-cell">
+                    <div class="manifest"><span class="id-epic">Eider 10546568 (Epic)</span><span class="id-steam"><span
+                          class="steam-id">5408453574472182733 (Steam)</span></span></div>
+                  </td>
+                  <td>27-Aug-2026</td>
+                  <td>3.280</td>
+                  <td class="notes-col"><a
+                      href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-280">https://ioi.dk/hitman/patch-notes/2026/game-update-3-280</a>
+                  </td>
+                  <td class="comment-col">- <a href="https://ioi.dk/hitman/patch-notes/2026/game-update-3-280">See the
+                      list of bug
+                      fixes</a> <br /> - Added Herbalist ET. <br /> - Guard behaviour changes.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="zhm-compatibility-table" class="table-panel">
+        <div class="wide content">
+          <h2>ZHM compatibility table</h2>
+          <ul>
+            <li>
+              For instructions on installing the SDK, refer to the
+              <a href="https://github.com/OrfeasZ/ZHMModSDK/blob/master/README.md">official documentation</a>.
+            </li>
+            <li>
+              To my knowledge, the SDK is not backwards compatible, so ex. a newer SDK
+              version like v4.0.2 will not work with patch 3.230.1.
+            </li>
+            <li>
+              Even with the correct version of the SDK, the included mods could still
+              prevent the game from booting, if you encounter this, look at the
+              <code>ZHMModLoader.log</code> to see which mods are causing the crash, and
+              then remove them from the mods folder.
+            </li>
+            <li>
+              The patch ranges below were inferred from the ZHM release notes so they
+              could be wrong please do inform a hitman moderator if you find any issues
+              here.
+            </li>
+          </ul>
+          <div class="table-scroll">
+            <table class="patch-head zhm-table">
+              <colgroup>
+                <col class="col-zhm-range" />
+                <col class="col-zhm-sdk" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Patch range</th>
+                  <th>ZHM version</th>
+                </tr>
+              </thead>
+            </table>
+            <details class="fold patch-fold">
+              <summary>
+                <span class="fold-tri" aria-hidden="true"></span>
+                Banned patches
+              </summary>
+              <table class="zhm-table">
+                <colgroup>
+                  <col class="col-zhm-range" />
+                  <col class="col-zhm-sdk" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td>3.10-3.11</td>
+                    <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v1.2.1">v1.2.1</a></td>
+                  </tr>
+                  <tr>
+                    <td>3.20</td>
+                    <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v1.3.0">v1.3.0</a></td>
+                  </tr>
+                  <tr>
+                    <td>3.30</td>
+                    <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v1.4.2">v1.4.2</a></td>
+                  </tr>
+                  <tr>
+                    <td>3.40</td>
+                    <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v1.4.5">v1.4.5</a></td>
+                  </tr>
+                  <tr>
+                    <td>3.50-3.70</td>
+                    <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v1.4.6">v1.4.6</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </details>
+            <table class="zhm-table">
+              <colgroup>
+                <col class="col-zhm-range" />
+                <col class="col-zhm-sdk" />
+              </colgroup>
+              <tbody>
+                <tr class="patch-group allowed">
+                  <td colspan="2">Allowed patches</td>
+                </tr>
+                <tr>
+                  <td>3.100-3.120</td>
+                  <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v1.5.0">v1.5.0</a></td>
+                </tr>
+                <tr>
+                  <td>3.130</td>
+                  <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v1.6.0">v1.6.0</a></td>
+                </tr>
+                <tr>
+                  <td>3.140-3.200</td>
+                  <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v2.0.0">v2.0.0</a></td>
+                </tr>
+                <tr>
+                  <td>3.210.1-3.230.1</td>
+                  <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v3.1.1">v3.1.1</a></td>
+                </tr>
+                <tr>
+                  <td>3.240.1-3.270</td>
+                  <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v4.0.2">v4.0.2</a></td>
+                </tr>
+                <tr>
+                  <td>3.280</td>
+                  <td><a href="https://github.com/OrfeasZ/ZHMModSDK/releases/tag/v4.1.0">v4.1.0</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="miscellaneous-info">
+        <div class="wrap content">
+          <details class="fold">
+            <summary>
+              <span class="fold-tri" aria-hidden="true"></span>
+              <h2>Misc info</h2>
+            </summary>
+            <div class="fold-body">
+              <ul>
+                <li>
+                  Both Steam Depot Downloader and Legendary require you to own the game on Steam or Epic
+                  respectively to download the required files.
+                  <ul>
+                    <li>
+                      Note that the free Steam Demo of Hitman WoA lets you download all the patch files,
+                      although you may not be able to do much with them, as explained below.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  The manifest files provided / linked require you to own the game on Steam / Epic to
+                  play the game with. Piracy is not condoned.
+                </li>
+                <li>
+                  In general, any edition of Hitman WoA actually has you install all the game files,
+                  buying DLC just unlocks access. No matter what DLC you own, downpatching will
+                  similarly give you all game files. But you might not be able to play all of it if you
+                  don't own access to them.
+                </li>
+                <li>
+                  The downpatched files from Steam and Epic are mostly but not completely compatible
+                  with each other. Any files ending with <code>.rpkg</code> are cross-platform. However,
+                  the <code>Launcher.exe</code> and <code>Hitman3.exe</code> will only work on the
+                  platform they are designed for.
+                  <ul>
+                    <li>
+                      Due to an inability to get earlier versions of the <code>.exe</code> files from
+                      Steam Depot Downloader, Steam Hitman WoA is probably locked onto versions of January
+                      2022 or later.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  "Downpatching" Hitman WoA with the following methods is not true downpatching like you
+                  will see in other games.
+                  <ul>
+                    <li>
+                      The game server will remain the current version, which can cause some strange
+                      interactions (more on this later).
+                    </li>
+                    <li>
+                      Technically you can use an older game version along with an older version of
+                      <a href="https://thepeacockproject.org/wiki/intel/what-is-peacock/">Peacock</a>,
+                      but this would mainly just help you avoid some visual bugs. Also some older
+                      versions of Peacock are not archived publicly.
+                    </li>
+                    <li>Generally speaking the current game server is fine for our purposes on patch 3.230.1 and after.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Some items or missions from later patches are available on earlier patches. Here are
+                  some general guidelines regarding compatibility (non-exhaustive list, do not take as
+                  universal truths)
+                  <ul>
+                    <li>
+                      A suit / item with messed up name but with a thumbnail (insert screenshot later)
+                      will work if equipped.
+                      <ul>
+                        <li>
+                          In general, a missing thumbnail indicates that an item is unusable on that
+                          patch. If you equip it, it will not show up in inventory after you are loaded
+                          in (for item), or you will not be wearing it (for suit).
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      A mission (main mission, contract, escalation, etc) will work even if the
+                      thumbnail is gone and name is messed up.
+                      <ul>
+                        <li>However, a mission that says "Get Access" will not work</li>
+                      </ul>
+                    </li>
+                    <li>
+                      In general, some items are internally introduced to the game's servers before they
+                      officially become available in a patch. In a downpatched game state, you can
+                      access some items earlier than you should be able to (with fully working
+                      thumbnails and normal item name).
+                      <ul>
+                        <li>
+                          For instance, Molotov can be accessed in the downpatch state as far back as
+                          January 2022 (with non-glitched UI / thumbnail), although it was only
+                          introduced to the game officially in July 2022.
+                        </li>
+                        <li>
+                          Because of this, while the official game patch notes / roadmaps are a good
+                          guideline for when an item would be available, it is not 100% correct.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      In general, you can unlock items on an older patch. As long as the mission / item
+                      involved are playable (following guidelines above), it should work. Even if the
+                      item has messed up name and the challenge name UI is also messed up, it will
+                      unlock. When you return to current patch, you will retain that unlock you
+                      completed on old patch.
+                    </li>
+                    <li>
+                      You will not lose progress, mastery, or challenge completion by downpatching, in
+                      general.
+                      <ul>
+                        <li>
+                          Exception: Some items / missions will be unplayable, or simply not there on older
+                          patches. In this case, your new patch unlocks won't carry over. See guidelines
+                          above.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="acknowledgements">
+        <div class="wrap content">
+          <h2>Acknowledgements</h2>
+          <ul>
+            <li>
+              Thank you to Solder for the
+              <a href="https://hitruns-wiki.vercel.app/docs/downpatching">original site</a>
+              this was based off of as a lot of information was directly copied from that.
+            </li>
+            <li>
+              I would also like to include the original acknowledgements from the original site:
+              <ul>
+                <li>
+                  Thank you <a href="https://github.com/notexe">Notex</a> for sharing the Legendary
+                  manifest files (Legendary manifests are only generated if you played the game on that
+                  patch, so you would have to have played the game on every patch on Legendary since
+                  launch to have them all otherwise), and also giving valuable advice on this topic
+                </li>
+                <li>
+                  Thank you <a href="https://github.com/Tinosaurus">Tinosaurus</a> for troubleshooting
+                  this process with me as well, and creating a video tutorial for Epic / Legendary
+                  downpatching
+                </li>
+                <li>
+                  Thank you <a href="https://github.com/derrod/legendary">Legendary</a> and
+                  <a href="https://github.com/SteamRE/DepotDownloader">Steam Depot Downloader</a> once
+                  again for making this possible
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </div>
+</body>
+
+</html>
