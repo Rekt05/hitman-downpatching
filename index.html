@@ -157,13 +157,25 @@
               <a
                 href="https://github.com/SteamRE/DepotDownloader/releases/latest">https://github.com/SteamRE/DepotDownloader/releases/latest</a>
               (download the zip for your operating system, e.g.
-              <code>DepotDownloader-windows-x64.zip</code> if on Windows, then unzip it to the
+              <code>DepotDownloader-windows-x64.zip</code> on Windows or
+              <code>DepotDownloader-linux-x64.zip</code> on Linux, then unzip it to the
               folder you just created)
             </li>
             <li>
-              Download the downpatch bat file from here:
-              <a href="assets/Hitman%20WoA%20Downpatch.bat" download="Hitman WoA Downpatch.bat">Hitman WoA
-                Downpatch.bat</a> and put this file into the folder you just created.
+              Download the downpatch script for your OS and put it in the folder you just created:
+              <ul>
+                <li>
+                  Windows:
+                  <a href="assets/Hitman%20WoA%20Downpatch.bat" download="Hitman WoA Downpatch.bat">Hitman WoA
+                    Downpatch.bat</a>
+                </li>
+                <li>
+                  Linux:
+                  <a href="assets/hitman-woa-downpatch.sh" download="hitman-woa-downpatch.sh">hitman-woa-downpatch.sh</a>
+                  (then in a terminal in that folder run
+                  <code>chmod +x hitman-woa-downpatch.sh</code>)
+                </li>
+              </ul>
             </li>
             <li>
               If you plan to patch the files of your original game install to save disk space,
@@ -197,10 +209,20 @@
               mentioned at the table below.
             </li>
             <li>
-              Copy the manifest ID of the patch you would like to download and then open the
-              <a href="assets/Hitman%20WoA%20Downpatch.bat" download="Hitman WoA Downpatch.bat">Hitman WoA
-                Downpatch.bat</a>
-              in the folder you just created and paste the manifest ID using right click, then press enter.
+              Copy the manifest ID of the patch you would like to download, then run the script
+              in the folder you just created:
+              <ul>
+                <li>
+                  Windows: open
+                  <a href="assets/Hitman%20WoA%20Downpatch.bat" download="Hitman WoA Downpatch.bat">Hitman WoA
+                    Downpatch.bat</a>,
+                  paste the manifest ID using right click, then press enter.
+                </li>
+                <li>
+                  Linux: run <code>./hitman-woa-downpatch.sh</code>, paste the manifest ID, then
+                  press enter.
+                </li>
+              </ul>
             </li>
             <li>
               Afterwards you will be prompted to put in your steam username and password, if you have any additional 2FA
@@ -242,7 +264,7 @@
 
           <h4>Authentication issues</h4>
           <p>
-            If the .bat / DepotDownloader method fails to log in, you can download the same depot through
+            If the .bat / .sh DepotDownloader method fails to log in, you can download the same depot through
             Steam itself instead.
           </p>
           <ul>
