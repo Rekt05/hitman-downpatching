@@ -15,4 +15,5 @@ fi
 
 "$dd" -app 1847520 -depot 1659041 -manifest "$manifest" -user "$username" -remember-password -dir "./HITMANWOADOWNPATCH" -validate
 rm -rf "./HITMANWOADOWNPATCH/.DepotDownloader"
-printf '1659040\n' > "./HITMANWOADOWNPATCH/steam_appid.txt"
+mkdir -p "./HITMANWOADOWNPATCH/Retail"
+printf '1659040\n' > "./HITMANWOADOWNPATCH/Retail/steam_appid.txt"
